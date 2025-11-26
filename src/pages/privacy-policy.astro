@@ -1,0 +1,46 @@
+---
+// src/pages/privacy-policy.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+import PrivacyPolicy from '../content/privacy-policy.md';
+---
+
+<BaseLayout title="Privacy Policy">
+  <Navigation />
+
+  <main class="privacy-page">
+    <article
+      class="
+        content
+        prose prose-neutral md:prose-lg
+        leading-relaxed
+        prose-p:my-4
+        prose-ul:my-4 prose-ol:my-4
+        prose-li:my-1.5
+        prose-h2:mt-10 prose-h2:mb-4
+        prose-h3:mt-8 prose-h3:mb-3
+        prose-hr:my-8
+      "
+    >
+      <PrivacyPolicy />
+    </article>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style>
+  .privacy-page {
+    min-height: 60vh;
+    /* more breathing room around the whole page */
+    padding-block: 3.5rem;
+  }
+
+  .content {
+    max-width: 48rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+</style>

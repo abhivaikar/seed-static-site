@@ -1,0 +1,88 @@
+---
+const { currentPath = "/" } = Astro.props;
+---
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-content">
+      <a href="/" class="logo">
+        <img src={`${import.meta.env.BASE_URL}/logo.png`} alt="Seed Logo" class="logo-icon" />
+        Seed
+      </a>
+      <div class="nav-links">
+        <a href={`${import.meta.env.BASE_URL}/#features`}>Features</a>
+        <a href={`${import.meta.env.BASE_URL}/#demo`}>Seed in action</a>
+        <a href={`${import.meta.env.BASE_URL}/privacy-policy`} class={currentPath === "/privacy-policy" ? "active" : ""}>
+          Privacy
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(250, 249, 240, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+  }
+
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) 0;
+    min-height: 4.25rem;
+  }
+
+  .logo {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .logo:hover {
+    opacity: 1;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-accent);
+  }
+
+  .nav-links a.active {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 640px) {
+    .nav-links {
+      gap: var(--spacing-sm);
+    }
+  }
+</style>

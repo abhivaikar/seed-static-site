@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abhijeetvaikar.github.io/seed-static-site/sitemap-index.xml
