@@ -119,6 +119,26 @@ npm run preview
 
 ## Deployment
 
+This site supports two deployment options:
+
+### Deploy to Netlify (Recommended for PR Previews)
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/abhivaikar/seed-static-site)
+
+**Features:**
+- Automatic preview deployments for every pull request
+- Instant rollbacks
+- Deploy previews at unique URLs
+- No merge required to test changes
+
+**Setup:**
+1. Click the "Deploy to Netlify" button above
+2. Authenticate with GitHub
+3. Netlify will automatically detect the `netlify.toml` configuration
+4. Every PR will get a unique preview URL
+
+### Deploy to GitHub Pages (Production)
+
 This site automatically deploys to GitHub Pages when you push to the `main` branch.
 
 ### Initial Setup for GitHub Pages
