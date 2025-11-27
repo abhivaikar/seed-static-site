@@ -14,10 +14,10 @@
     <!-- Video Demo Placeholder -->
     <div class="video-wrapper">
       <div class="video-placeholder">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="40" fill="#D97706" opacity="0.1"/>
-          <circle cx="40" cy="40" r="32" fill="#D97706" opacity="0.2"/>
-          <path d="M32 26L56 40L32 54V26Z" fill="#D97706"/>
+        <svg class="play-icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="40" class="circle-outer"/>
+          <circle cx="40" cy="40" r="32" class="circle-inner"/>
+          <path d="M32 26L56 40L32 54V26Z" class="play-button"/>
         </svg>
         <p>Video demo coming soon</p>
       </div>
@@ -75,5 +75,17 @@
     color: var(--color-text-secondary);
     font-size: var(--text-base);
     font-weight: 500;
+  }
+
+  .play-icon .circle-outer {
+    fill: var(--color-video-accent-light);
+  }
+
+  .play-icon .circle-inner {
+    fill: var(--color-video-accent-medium);
+  }
+
+  .play-icon .play-button {
+    fill: var(--color-video-accent);
   }
 </style>

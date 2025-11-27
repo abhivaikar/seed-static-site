@@ -149,15 +149,15 @@ const features = [
 
   /* Anthropic-inspired colors */
   .feature-card-oat {
-    background-color: #e3dacc;
+    background-color: var(--color-feature-oat);
   }
 
   .feature-card-cactus {
-    background-color: #bcd1ca;
+    background-color: var(--color-feature-cactus);
   }
 
   .feature-card-heather {
-    background-color: #cbcadb;
+    background-color: var(--color-feature-heather);
   }
 
   .feature-content {
@@ -169,7 +169,7 @@ const features = [
   .feature-icon {
     width: 40px;
     height: 40px;
-    background-color: rgba(217, 119, 87, 0.1);
+    background-color: var(--color-icon-bg);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -201,12 +201,12 @@ const features = [
   .image-placeholder {
     width: 100%;
     aspect-ratio: 4/3;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: var(--color-placeholder);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-placeholder-border);
   }
 
   .image-placeholder p {
