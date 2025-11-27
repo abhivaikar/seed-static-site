@@ -41,7 +41,7 @@ const { title, description = "Seed - AI-Powered Test Data Generator for Chrome" 
 
 <style is:global>
   :root {
-    /* Color Palette - Anthropic Style */
+    /* Color Palette - Anthropic Style (Light Mode) */
     --color-bg: #faf9f0;
     --color-bg-card: #f5f3ea;
     --color-text: #1a1918;
@@ -74,6 +74,17 @@ const { title, description = "Seed - AI-Powered Test Data Generator for Chrome" 
     /* Container */
     --container-max: 1280px;
     --container-padding: clamp(1.5rem, 1rem + 2.5vw, 4rem);
+  }
+
+  /* Dark Mode Colors */
+  :root.dark {
+    --color-bg: #1a1918;
+    --color-bg-card: #252321;
+    --color-text: #f5f3ea;
+    --color-text-secondary: #b8b6b3;
+    --color-accent: #d97757;
+    --color-accent-hover: #e88768;
+    --color-border: #3a3836;
   }
 
   * {

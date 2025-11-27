@@ -147,7 +147,7 @@ const features = [
     overflow: hidden;
   }
 
-  /* Anthropic-inspired colors */
+  /* Anthropic-inspired colors - Light Mode */
   .feature-card-oat {
     background-color: #e3dacc;
   }
@@ -158,6 +158,19 @@ const features = [
 
   .feature-card-heather {
     background-color: #cbcadb;
+  }
+
+  /* Anthropic-inspired colors - Dark Mode */
+  :global(.dark) .feature-card-oat {
+    background-color: #3a352e;
+  }
+
+  :global(.dark) .feature-card-cactus {
+    background-color: #2e3a35;
+  }
+
+  :global(.dark) .feature-card-heather {
+    background-color: #35303a;
   }
 
   .feature-content {
