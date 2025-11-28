@@ -10,17 +10,56 @@ const { currentPath = "/" } = Astro.props;
         <img src={`${import.meta.env.BASE_URL}/logo.png`} alt="Seed Logo" class="logo-icon" />
         Seed
       </a>
-      <div class="nav-links">
+      <div class="nav-right">
+        <ThemeToggle />
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="nav-links" id="nav-links">
         <a href={`${import.meta.env.BASE_URL}/#features`}>Features</a>
         <a href={`${import.meta.env.BASE_URL}/#demo`}>Seed in action</a>
         <a href={`${import.meta.env.BASE_URL}/privacy-policy`} class={currentPath === "/privacy-policy" ? "active" : ""}>
           Privacy
         </a>
-        <ThemeToggle />
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const nav = document.querySelector('.nav');
+
+  hamburger?.addEventListener('click', () => {
+    navLinks?.classList.toggle('active');
+    hamburger?.classList.toggle('active');
+    nav?.classList.toggle('menu-open');
+  });
+
+  // Close menu when clicking on a link
+  const links = navLinks?.querySelectorAll('a');
+  links?.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks?.classList.remove('active');
+      hamburger?.classList.remove('active');
+      nav?.classList.remove('menu-open');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    if (!target.closest('.nav-content') && !target.closest('.hamburger')) {
+      navLinks?.classList.remove('active');
+      hamburger?.classList.remove('active');
+      nav?.classList.remove('menu-open');
+    }
+  });
+</script>
 
 <style>
   .nav {
@@ -36,10 +75,10 @@ const { currentPath = "/" } = Astro.props;
 
   .nav-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) 0;
     min-height: 4.25rem;
+    position: relative;
   }
 
   .logo {
@@ -50,6 +89,8 @@ const { currentPath = "/" } = Astro.props;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    z-index: 102;
+    order: 1;
   }
 
   .logo:hover {
@@ -62,10 +103,52 @@ const { currentPath = "/" } = Astro.props;
     object-fit: contain;
   }
 
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 102;
+    order: 3;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
   .nav-links {
     display: flex;
     gap: var(--spacing-md);
     align-items: center;
+    margin-left: auto;
+    margin-right: var(--spacing-md);
+    order: 2;
   }
 
   .nav-links a {
@@ -83,9 +166,67 @@ const { currentPath = "/" } = Astro.props;
     color: var(--color-accent);
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
+    .nav-content {
+      justify-content: space-between;
+    }
+
+    .logo {
+      order: 1;
+    }
+
+    .nav-right {
+      order: 2;
+      margin-left: auto;
+      position: relative;
+      z-index: 105;
+    }
+
     .nav-links {
-      gap: var(--spacing-sm);
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 75%;
+      max-width: 320px;
+      background-color: var(--color-bg);
+      border-left: 1px solid var(--color-border);
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 6rem 2rem 2rem;
+      gap: 2rem;
+      transition: right 0.3s ease;
+      margin-left: 0;
+      margin-right: 0;
+      order: 3;
+    }
+
+    .nav-links.active {
+      right: 0;
+      box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+      z-index: 103;
+    }
+
+    .nav-links a {
+      font-size: var(--text-base);
+      width: 100%;
+      padding: 0.5rem 0;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .hamburger.active {
+      background-color: transparent;
+      border: none;
+      padding: 8px;
+    }
+
+    .nav.menu-open .nav-right :global(.theme-toggle) {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
     }
   }
 </style>
