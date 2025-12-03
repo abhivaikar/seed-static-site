@@ -92,13 +92,17 @@ DataSeed requests the following browser permissions:
 - **Data Access**: Only data you create within the extension
 
 ### 2. **Active Tab**
-- **Purpose**: To scan and fill forms on the current page (AI Auto Fill feature)
-- **Data Access**: Only when you explicitly click "Scan Page" or "Generate & Fill"
+- **Purpose**: To scan and fill forms on the current page (AI Auto Fill feature only)
+- **When Active**: ONLY when you explicitly click "Scan Form" or "Generate & Fill" in the AI Auto Fill tab
+- **Data Access**: Only reads visible form field labels and types from the current page
 - **What We Do**: Read visible form field labels and types, fill them with generated data
+- **Important**: DataSeed does NOT run on all websites automatically. The extension only accesses page content when you actively use the AI Auto Fill feature.
 
 ### 3. **Scripting**
-- **Purpose**: To inject the content script that enables form filling
-- **Data Access**: No data collected, only used to interact with form fields
+- **Purpose**: To dynamically inject the content script ONLY when AI Auto Fill is used
+- **When Active**: ONLY injected into the current tab when you click "Scan Form" or "Generate & Fill"
+- **Data Access**: No data collected, only used to interact with form fields on the current page
+- **Important**: Unlike many extensions, DataSeed does NOT automatically inject scripts into every website you visit. Scripts are only injected on-demand when you explicitly use the AI Auto Fill feature.
 
 ### 4. **Host Permissions**
 - **ai.openai.com**: To send requests to OpenAI API (if configured)
@@ -214,7 +218,6 @@ If you have questions about this privacy policy or how DataSeed handles data:
 - AI features are optional and use YOUR API keys
 - You control all your data
 - Uninstalling deletes everything
-- Open source and transparent
 
 
 **This privacy policy applies only to the DataSeed browser extension. Third-party AI providers have their own privacy policies.**
