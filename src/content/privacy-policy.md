@@ -1,4 +1,4 @@
-# Privacy Policy for Seed - Test Data Generator
+# Privacy Policy for DataSeed - Test Data Generator
 ---
 **Effective Date**: 26 November 2025
 **Last Updated**: 26 November 2025
@@ -6,14 +6,14 @@
 ---
 
 ## Introduction
-Seed ("we", "our", or "the extension") is a Chrome browser extension that helps developers and testers generate test data quickly using static generators, custom templates, and AI-powered generation. This privacy policy explains how Seed handles your data.
+DataSeed ("we", "our", or "the extension") is a Chrome browser extension that helps developers and testers generate test data quickly using static generators, custom templates, and AI-powered generation. This privacy policy explains how DataSeed handles your data.
 
 
 ## Data Collection and Storage
 
 ### What Data We Collect
 
-Seed stores the following data **locally on your device only**:
+DataSeed stores the following data **locally on your device only**:
 
 1. **Extension Settings**:
    - AI provider preferences (OpenAI, Gemini, DeepSeek, Ollama)
@@ -85,7 +85,7 @@ If you choose to use AI features, you can configure one or more of these third-p
 
 ## Permissions Explained
 
-Seed requests the following browser permissions:
+DataSeed requests the following browser permissions:
 
 ### 1. **Storage**
 - **Purpose**: To save your settings, API keys, and custom data locally
@@ -155,7 +155,7 @@ You have complete control over your data:
 
 ## Children's Privacy
 
-Seed is intended for developers and testers. We do not knowingly collect data from children under 13. If you are under 13, please do not use this extension.
+DataSeed is intended for developers and testers. We do not knowingly collect data from children under 13. If you are under 13, please do not use this extension.
 
 ---
 
@@ -175,7 +175,7 @@ We may update this privacy policy from time to time. Changes will be indicated b
 
 ## International Users
 
-Seed is a client-side extension that does not collect or transmit data to our servers. If you use cloud AI providers:
+DataSeed is a client-side extension that does not collect or transmit data to our servers. If you use cloud AI providers:
 - OpenAI: Data may be processed in the United States
 - Gemini: Data may be processed by Google globally
 - DeepSeek: Data is processed in the People's Republic of China (DeepSeek servers are located in China)
@@ -185,7 +185,7 @@ Seed is a client-side extension that does not collect or transmit data to our se
 
 ## Contact Information
 
-If you have questions about this privacy policy or how Seed handles data:
+If you have questions about this privacy policy or how DataSeed handles data:
 
 - **Email**: vaikar.abhijeet@gmail.com
 - **Developer**: Abhijeet Vaikar
@@ -217,7 +217,7 @@ If you have questions about this privacy policy or how Seed handles data:
 - Open source and transparent
 
 
-**This privacy policy applies only to the Seed browser extension. Third-party AI providers have their own privacy policies.**
+**This privacy policy applies only to the DataSeed browser extension. Third-party AI providers have their own privacy policies.**
 
 
 ## Changelog

@@ -1,10 +1,10 @@
-# Seed Chrome Extension - Static Website
+# DataSeed Chrome Extension - Static Website
 
-A modern, clean static website for the Seed Chrome extension built with Astro and deployed on GitHub Pages.
+A modern, clean static website for the DataSeed Chrome extension built with Astro and deployed on GitHub Pages.
 
 ## Overview
 
-This website serves as the landing page for Seed, an AI-powered test data generator Chrome extension. The site features:
+This website serves as the landing page for DataSeed, an AI-powered test data generator Chrome extension. The site features:
 
 - Modern, responsive design inspired by Anthropic's aesthetic
 - Animated hero section with typed.js text animation
@@ -201,7 +201,7 @@ Edit the markdown file at [src/content/privacy-policy.md](src/content/privacy-po
 ### Navigation & Footer
 
 - **Navigation**: [src/components/Navigation.astro](src/components/Navigation.astro)
-  - Links: Features, Seed in action, Privacy
+  - Links: Features, DataSeed in action, Privacy
   - Logo displays in header
 
 - **Footer**: [src/components/Footer.astro](src/components/Footer.astro)
