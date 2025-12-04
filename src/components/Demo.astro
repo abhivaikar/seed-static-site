@@ -11,16 +11,17 @@
       </p>
     </div>
 
-    <!-- Video Demo Placeholder -->
+    <!-- Video Demo -->
     <div class="video-wrapper">
-      <div class="video-placeholder">
-        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="40" cy="40" r="40" fill="#D97706" opacity="0.1"/>
-          <circle cx="40" cy="40" r="32" fill="#D97706" opacity="0.2"/>
-          <path d="M32 26L56 40L32 54V26Z" fill="#D97706"/>
-        </svg>
-        <p>Video demo coming soon</p>
-      </div>
+      <video
+        class="demo-video"
+        controls
+        preload="metadata"
+        poster={`${import.meta.env.BASE_URL}/images/hero-poster-image.png`}
+      >
+        <source src={`${import.meta.env.BASE_URL}/demo-video/dataseed-demo-video-mp4.mp4`} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
@@ -59,21 +60,17 @@
     margin: 0 auto;
   }
 
-  .video-placeholder {
-    aspect-ratio: 16/9;
-    background-color: var(--color-bg);
+  .demo-video {
+    width: 100%;
+    height: auto;
     border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-md);
-    border: 2px dashed var(--color-border);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
   }
 
-  .video-placeholder p {
-    color: var(--color-text-secondary);
-    font-size: var(--text-base);
-    font-weight: 500;
+  .demo-video:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
   }
 </style>
