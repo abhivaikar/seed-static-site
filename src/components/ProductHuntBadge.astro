@@ -1,5 +1,5 @@
 ---
-// ProductHunt Badge component with theme support
+// ProductHunt Badge component
 ---
 
 <a
@@ -11,14 +11,6 @@
   <img
     src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1046156&theme=light&t=1764946886147"
     alt="DataSeed - Access test data instantly for web testing or prototyping | Product Hunt"
-    class="badge-light"
-    width="250"
-    height="54"
-  />
-  <img
-    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1046156&theme=dark&t=1764946929194"
-    alt="DataSeed - Access test data instantly for web testing or prototyping | Product Hunt"
-    class="badge-dark"
     width="250"
     height="54"
   />
@@ -38,23 +30,5 @@
     display: block;
     width: 250px;
     height: 54px;
-  }
-
-  /* Show light badge by default (light mode) */
-  .badge-light {
-    display: block;
-  }
-
-  .badge-dark {
-    display: none;
-  }
-
-  /* Show dark badge in dark mode */
-  :root.dark .badge-light {
-    display: none;
-  }
-
-  :root.dark .badge-dark {
-    display: block;
   }
 </style>
