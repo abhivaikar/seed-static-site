@@ -1,4 +1,5 @@
 ---
+import ProductHuntBadge from './ProductHuntBadge.astro';
 const currentYear = new Date().getFullYear();
 ---
 
@@ -7,6 +8,9 @@ const currentYear = new Date().getFullYear();
     <div class="footer-content">
       <div class="footer-links">
         <a href={`${import.meta.env.BASE_URL}/privacy-policy`}>Privacy Policy</a>
+      </div>
+      <div class="footer-badge">
+        <ProductHuntBadge />
       </div>
       <div class="footer-copy">
         <p>&copy; {currentYear} DataSeed Extension. All rights reserved.</p>
@@ -47,6 +51,11 @@ const currentYear = new Date().getFullYear();
     color: var(--color-accent);
   }
 
+  .footer-badge {
+    display: flex;
+    justify-content: center;
+  }
+
   .footer-copy {
     color: var(--color-text-secondary);
     font-size: var(--text-xs);
@@ -56,6 +65,7 @@ const currentYear = new Date().getFullYear();
     .footer-content {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
     }
 
     .footer-copy {

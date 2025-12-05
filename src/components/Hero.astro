@@ -1,5 +1,6 @@
 ---
 import Button from './Button.astro';
+import ProductHuntBadge from './ProductHuntBadge.astro';
 ---
 
 <section class="hero">
@@ -20,6 +21,9 @@ import Button from './Button.astro';
           >
             Add to Chrome
           </Button>
+        </div>
+        <div class="hero-badge">
+          <ProductHuntBadge />
         </div>
       </div>
       <div class="hero-visual">
@@ -118,6 +122,10 @@ import Button from './Button.astro';
     flex-wrap: wrap;
   }
 
+  .hero-badge {
+    margin-top: var(--spacing-md);
+  }
+
   .hero-visual {
     display: flex;
     justify-content: center;
@@ -164,6 +172,11 @@ import Button from './Button.astro';
     }
 
     .hero-cta {
+      justify-content: center;
+    }
+
+    .hero-badge {
+      display: flex;
       justify-content: center;
     }
   }
