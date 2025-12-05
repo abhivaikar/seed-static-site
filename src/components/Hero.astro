@@ -21,8 +21,6 @@ import ProductHuntBadge from './ProductHuntBadge.astro';
           >
             Add to Chrome
           </Button>
-        </div>
-        <div class="hero-badge">
           <ProductHuntBadge />
         </div>
       </div>
@@ -118,12 +116,9 @@ import ProductHuntBadge from './ProductHuntBadge.astro';
 
   .hero-cta {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
     flex-wrap: wrap;
-  }
-
-  .hero-badge {
-    margin-top: var(--spacing-md);
+    align-items: center;
   }
 
   .hero-visual {
@@ -173,11 +168,7 @@ import ProductHuntBadge from './ProductHuntBadge.astro';
 
     .hero-cta {
       justify-content: center;
-    }
-
-    .hero-badge {
-      display: flex;
-      justify-content: center;
+      flex-direction: column;
     }
   }
 </style>
